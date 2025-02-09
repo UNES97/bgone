@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Removal Tool</title>
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+    <img src="caty.png" alt="Floating Cat" class="floating-cat">
+    <div class="container">
+        <div class="header">
+            <h1>AI Background Removal</h1>
+            <p class="subtitle">Transform your images instantly with our advanced AI-powered background removal tool. Powered by <a href="https://huggingface.co/briaai/RMBG-1.4" target="_blank">RMBG V1.4</a>.</p>
+        </div>
+
+        <div class="upload-section">
+            <label for="upload" class="upload-label" role="button" tabindex="0">
+                <span class="upload-icon">🖼️</span>
+                <span class="upload-text">Drop your image here or click to upload</span>
+            </label>
+            <input id="upload" type="file" accept="image/*" aria-label="Upload image" />
+        </div>
+
+        <div class="image-container" id="dropZone">
+            <div class="loader"></div>
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <p id="status">Ready to transform your image</p>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
